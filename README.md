@@ -1,41 +1,105 @@
-Netflix Titles Dashboard – Power BI
-Description
-Ce projet présente un tableau de bord Power BI construit à partir du jeu de données Netflix Titles. Il permet d analyser la répartition des contenus par type, pays, année de sortie, genre et classification. Le travail inclut le nettoyage des données, la modélisation et la création de visualisations interactives.
-Contenu du dépôt
-        - Fichier Power BI (.pbix) contenant le tableau de bord complet
-        - Jeu de données Netflix Titles au format CSV
-        - Captures d écran du tableau de bord
-        - Documentation sur les étapes de transformation des données
-Objectifs du projet
-        - Explorer la distribution des films et séries disponibles sur Netflix
-        - Visualiser les tendances de production par année
-        - Identifier les pays les plus représentés
-        - Analyser les genres et classifications les plus fréquents
-        - Construire un tableau de bord professionnel avec une identité visuelle cohérente
-        Préparation et nettoyage des données
-        Les principales étapes réalisées dans Power Query sont les suivantes :
-        - Conversion des dates et extraction de l année d ajout
-        - Normalisation des colonnes de pays et de genres
-        - Fractionnement des listes de pays en lignes distinctes
-        - Gestion des valeurs manquantes
-        - Création de colonnes dérivées pour faciliter l analyse
-Visualisations principales
-Le tableau de bord inclut :
-        - Indicateurs clés (nombre total de titres, années min et max, nombre de genres, nombre de classifications)
-        - Histogramme des classifications (ratings)
-        - Diagramme circulaire Films vs Series
-        - Classement des genres les plus représentés
-        - Evolution des titres par année
-        - Treemap des pays producteurs
-        - Mise en forme personnalisée inspirée de l identité visuelle Netflix
-Technologies utilisées
-        - Power BI Desktop
-        - Power Query
-        - DAX (mesures simples)
-        - Dataset Netflix Titles
+# Power BI Dashboard – Analyse du catalogue Netflix
 
+## Description du projet
 
-Projet réalisé dans le cadre d un apprentissage en data et business intelligence.
+Ce projet consiste à analyser un dataset Netflix afin de visualiser et comprendre la répartition des contenus (films et séries) selon différents critères : genres, pays, durée et évolution dans le temps.
 
+L’objectif est de construire un dashboard interactif avec Power BI permettant une exploration claire et efficace des données.
 
+---
 
+## Dataset
+
+Le dataset utilisé contient les colonnes suivantes :
+
+* title : titre du contenu
+* type : Film ou Série
+* country : pays de production
+* listed_in : genres
+* duration_value : valeur numérique de la durée
+* duration_type : unité (minutes ou saisons)
+* date_added : date d’ajout sur la plateforme
+
+---
+
+## Préparation des données (Power Query)
+
+Les transformations suivantes ont été effectuées :
+
+* Séparation de la colonne duration en deux colonnes :
+
+  * duration_value
+  * duration_type
+* Conversion de duration_value en nombre entier
+* Fractionnement de la colonne listed_in en lignes pour permettre l’analyse des genres
+* Nettoyage de la colonne country (suppression des espaces et simplification)
+* Création d’une colonne conditionnelle pour distinguer les films et les séries
+
+---
+
+## Visualisations réalisées
+
+Le dashboard comprend les éléments suivants :
+
+### Indicateurs clés
+
+* Nombre total de films
+* Nombre total de séries
+
+### Graphiques
+
+* Répartition des contenus par type (films vs séries)
+* Évolution du nombre de contenus ajoutés dans le temps
+* Analyse des genres les plus représentés
+* Répartition des contenus par pays
+
+---
+
+## Carte
+
+Une carte permet de visualiser la distribution géographique des contenus en fonction du pays de production.
+
+---
+
+## Personnalisation
+
+* Mise en forme cohérente des couleurs
+* Titres explicites
+* Organisation claire des visuels
+* Utilisation de la mise en forme conditionnelle
+
+---
+
+## Objectifs
+
+* Développer des compétences en data visualisation
+* Maîtriser Power BI et Power Query
+* Construire un projet de portfolio
+
+---
+
+## Outils utilisés
+
+* Microsoft Power BI
+* Power Query
+
+---
+
+## Aperçu
+
+Ajouter ici une capture d’écran du dashboard.
+
+---
+
+## Améliorations possibles
+
+* Ajout de filtres interactifs
+* Analyse plus fine par année
+* Segmentation avancée par durée
+* Amélioration de l’expérience utilisateur
+
+---
+
+## Auteur
+
+Projet réalisé dans le cadre d’un apprentissage en data analysis.
